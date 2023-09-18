@@ -1,4 +1,19 @@
 #pre: 
+#post: returns araP value
+def araP(SideNum,Leng,Rad):
+    araP = (SideNum/2) * Leng * Rad
+    return araP
+#pre: 
+#post: returns araP value
+def perimP(SideNum,Leng):
+    perimP = SideNum * Leng
+    return perimP
+#pre: 
+#post: returns side num value
+def getSideNums():
+    SidNum = int(input("Give me your number of sides: "))
+    return SidNum
+#pre: 
 #post: returns base value
 def getBase():
     base = float(input("Give me a base: "))
@@ -16,13 +31,18 @@ def araT(b,h):
 #pre: 
 #post: returns length value
 def getLeng():
-    length = float(input("Give me a length: "))
+    length = float(input("Give me the length: "))
     return length
 #pre: 
 #post: returns width value
 def getWidt():
-    width = float(input("Give me a width: "))
+    width = float(input("Give me the width: "))
     return width
+#pre: 
+#post: returns radius value
+def getRad():
+    rad = float(input("Give me the radius of the inscribed circle: "))
+    return rad
 #pre: requires length and width values
 #post: returns area value
 def ara(l,w):
@@ -50,19 +70,29 @@ def rectCalc():
      p = perim(l,w)
      print("Your area is: " + str(a))
      print("Your perimeter is: " + str(p))
+def polyCalc():
+    sn = getSideNums()
+    l =  getLeng()
+    r = getRad()
+    a = araP(sn,l,r)
+    p = perimP(sn,l)
+    print("Your area is: " + str(a))
+    print("Your perimeter is: " + str(p))
 #pre: client program
+#during: have a mental breakdown
 #post: displays area and perimeter
 def main():
     print("The following program calculates the area and perimeter of geometrical shape")
-    print("Which of the following shapes are you working with ? 1) - Triangle 2) - Circle 3) - Rectangle")
+    print("Which of the following shapes are you working with ? 1) - Triangle 2) - Polygon 3) - Rectangle")
     shape = input()
     if shape == "1":
         triCalc()
     elif shape == "2":
-        circCalc()
+        polyCalc()
     elif shape == "3":
         rectCalc()
     else:
         print("That wasn't an option")
 
 main()
+#this program is terriblie and awful and I wanna cry and i should paid attention in algebra/geometry :,(
