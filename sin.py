@@ -52,7 +52,8 @@ TAXES = str()
 TAXES = "tax"
 i = int()
 i = 0
-
+greeting = str()
+greeting = "Hello im here to make you pay taxes"
 while i <= 15:
     i = i + 1
     for v in VOWELS:
@@ -72,4 +73,15 @@ while i <= 15:
                 print("IM NOT PAYING TAXES")
             else:
                 print("No taxes here")
+
+    for t in greeting:
+        print(t)
+        for letter in TAXES:
+            print(letter)
+            if t == letter:
+                print("DANG IT THERES TAXES")
+            else:
+                print("No taxes here YIPPE")
+
+
 
