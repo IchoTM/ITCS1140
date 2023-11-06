@@ -1,4 +1,4 @@
-ego = ["test",["Solem Lament" ,1 , 0.5 , 1 ,2], ["Mimicry", 1, 3 , 2 ,1], ["Justitia", 2 , 2 , 2 , 2]]
+ego = ["EGO",["Solem Lament" ,1 , 0.5 , 1 ,2], ["Mimicry", 1, 3 , 2 ,1], ["Justitia", 2 , 2 , 2 , 2]]
 
 ##print(ego)
 ###expecting entire list
@@ -10,10 +10,9 @@ ego = ["test",["Solem Lament" ,1 , 0.5 , 1 ,2], ["Mimicry", 1, 3 , 2 ,1], ["Just
 ###expecting second damage number only
 
 def egoF(e):
-    l = e
-    ui = input("What EGO are you trying to find? : ")
-    if ui in ego:
-        print(l.index(ui))
+    
+    for entry in e:
+        print(str(e[0]) + " " + str(entry))
 
 def egoM(e):
     l = e
